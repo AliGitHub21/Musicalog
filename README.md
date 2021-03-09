@@ -28,7 +28,7 @@
 
 ```
 - Download the source code and open it with your choice of IDE.
-- change the connectionString setting in 'appsettings.json' file based on your Sql Server database connection and save the file
+- change the connectionString setting in 'appsettings.json' file based on your Sql Server
 - Follow the instruction below based on your machine operating system:
 >* Windows:
     1) Change into '../Musicalog.Presentation/' directory from your integrated terminal
