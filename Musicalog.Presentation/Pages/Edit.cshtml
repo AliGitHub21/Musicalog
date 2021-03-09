@@ -1,19 +1,47 @@
-@page
-@model Musicalog.Presentation.Pages.Edit
 
+@page "{id:int}"
+@model EditModel
 @{
-    Layout = null;
+    ViewData["Title"] = "Edit Album";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<div>
-    
+<div class="container row p-0 m-0">  
+    <div class="col-10">  
+       <h2 class="text-info">Edit Album - @Model.Title</h2>  
+    </div>  
+    <div class="col-12 border p-3 mt-3">  
+      <form method="post">
+        <input type="hidden" asp-for="Album.Id" />
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label asp-for="Album.Name"></label>
+            <input asp-for="Album.Name" type="text" class="form-control" id="Album.Name" required>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label asp-for="Album.Artist"></label>
+            <input asp-for="Album.Artist" type="text" class="form-control" id="Album.Artist" required>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label asp-for="Album.Label"></label>
+            <input asp-for="Album.Label" type="text" class="form-control" id="Album.Label" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label asp-for="Album.Type"></label>
+            <select asp-for="Album.Type" id="Album.Type" class="form-control" required>
+              <option value="@Model.SelectedType" selected>@Model.SelectedType</option>
+              <option value="vinyl">vinyl</option>
+              <option value="CD">CD</option>
+            </select>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label asp-for="Album.Stock"></label>
+            <input asp-for="Album.Stock" type="text" class="form-control" id="Album.Stock">
+          </div>
+        </div>
+        <button class="btn btn-outline-success" type="submit">Update</button>
+        <a class="btn btn-outline-secondary" asp-page="./Index">Cancel</a>
+      </form>
+    </div>
 </div>
-</body>
-</html>

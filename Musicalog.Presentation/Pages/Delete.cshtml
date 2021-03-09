@@ -1,19 +1,16 @@
-@page
-@model $NAMESPACE$.$CLASS$
 
+@page "{id:int}"
+@model DeleteModel
 @{
-    Layout = null;
+    ViewData["Title"] = "Remove Album";
 }
 
-<!DOCTYPE html>
+<h2 class="text-info">Remove Album</h2>  
 
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-    <div>
-        $END$  
-    </div>
-</body>
-</html>
+<p>Are you sure you want to delete <strong>@Model.Title</strong> album?</p>
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+    <button class="btn btn-outline-danger" type="submit">Yes</button>
+    <a class="btn btn-outline-secondary" asp-page="./Index">No</a>
+</form>

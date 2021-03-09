@@ -1,25 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
+using Musicalog.Presentation.Services;
+using Musicalog.Presentation.ViewModels;
 
 namespace Musicalog.Presentation.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly IAlbumService _albumService;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        [BindProperty]
+        public IEnumerable<AlbumVm> AllAlbumsAsync { get; set; } 
+
+        public IndexModel(IAlbumService albumService, IMapper mapper)
         {
-            _logger = logger;
+            _albumService = albumService;
         }
 
-        public void OnGet()
-        {
-
-        }
+        public async Task OnGet()  
+        {  
+            this.AllAlbumsAsync = await _albumService.GetAllAlbumsAsync();
+        }  
     }
 }

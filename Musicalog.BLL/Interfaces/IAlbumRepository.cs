@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Musicalog.DAL.Entities;
 
-namespace Musicalog.BLL.Repositories
+namespace Musicalog.BLL.Interfaces
 {
     public interface IAlbumRepository
     {

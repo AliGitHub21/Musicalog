@@ -1,12 +1,13 @@
-$HEADER$using Microsoft.AspNetCore.Mvc;
-namespace $NAMESPACE$
+using Microsoft.AspNetCore.Mvc;
+
+namespace Musicalog.Presentation.Controllers
 {
-  public class $CLASS$: Controller
-  {
-    // GET
-    public IActionResult Index()
+    public class AlbumsController : Controller
     {
-	  $END$return View();
+        // GET List of Albums and serves as the index page
+        public IActionResult Index()
+        {
+            return View();
+        }
     }
-  }
 }
