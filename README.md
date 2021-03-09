@@ -1,7 +1,7 @@
 # Musicalog Test Project
 
 > The goal of this project is to develop a web application that allows users to keep a catalogue of music albums.
-> This will allow listing, create, edit or deleting albums from the catalog.
+> This will allow listing, create, edit or deleting albums from the catalogue.
 
 ## Table of contents
 
@@ -46,13 +46,13 @@
 
 > - The application allows user to create,edit and delete an album form catalogue.
 > - The list of created albums have sorting and pagination feature enabled on the client-side
-> - Adding serach feature to the list is also possible by changing the javascript function provided for loading data-table
+> - Adding serach feature to the list is also possible by modification to the javascript function provided for data-table
 
 ## Improvement
 
-> - Implementing modern javascript framework(Angular or React) fro the front-end
-> - Adding security features(JWT, etc )to the application
-> - Adding Dapper ORM to the implementation for read operations
+> - Implementing modern javascript framework(Angular or React) to serve as the front-end app
+> - Adding security features(JWT, etc ) to the application
+> - Adding Dapper ORM to the implementation for read operations to enhance performance
 
 ## Limitations
 
